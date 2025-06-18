@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;  
+  width: 100%;
   height: 100%;
   z-index:-4;
   overflow: hidden;
@@ -52,6 +52,9 @@
   gap: .5rem;
   flex-direction: column;
 }
+.day-item{
+  display: flex;
+}
 
 .right .data {
   display: flex;
@@ -67,3 +70,10 @@
 .right .data p {
   font-size: 1.2rem;
 }
+.checkData{
+  width: 30rem;
+  height: 22rem;
+  background-color: rgba(255, 255, 255, 0.734);
+  border-radius: 1rem;
+}
+
