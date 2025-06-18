@@ -34,6 +34,13 @@ const App = () => {
   const Completed = days.filter(d => getStatus(d.day, d.month) === "Completed").length;
   return (
     <div className='container'>
+      <div className="image">
+        <img src="https://plus.unsplash.com/premium_photo-1671512497719-173938f4d3a4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <img src="https://plus.unsplash.com/premium_photo-1671512499810-ac5b5dd3bc2b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <img src="https://images.unsplash.com/photo-1468971050039-be99497410af?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+      </div>
+      
       <div className="box">
         <div className="left">
           <h1>DAYS</h1>
