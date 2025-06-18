@@ -21,6 +21,17 @@ const App = () => {
       month: 'long',
     }).format(date);
   };
+
+  const getStatus = (day, month) => {
+    if (month < currentMonth) return "Completed";
+    if (month > currentMonth) return "Not Completed";
+
+    if (day < currentDay) return "Completed";
+    if (day === currentDay) return "Running....";
+    return "Not Completed";
+  };
+
+  const Completed = days.filter(d => getStatus(d.day, d.month) === "Completed").length;
   return (
     <div className='container'>
       <div className="box">
@@ -37,15 +48,9 @@ const App = () => {
           <div className="data">
             {
               days.map((d, i) => {
-                let status = '';
-                if (d.month < currentMonth) status = "Completed";
-                else if (d.month > currentMonth) status = "Not Completed"
-                else {
-                  if (d.day < currentDay) status = "Completed"
-                  else if (d.day === currentDay) status = "Running...."
-                  else status = "Not Completed"
+                const status = getStatus(d.day, d.month)
 
-                }
+
                 const color =
                   status === "Completed" ? "#98CD00" :
                     status === "Running...." ? "#FCEF91" : "tomato"
@@ -57,6 +62,7 @@ const App = () => {
         </div>
       </div>
       <h1>Total: {days.length} Days</h1>
+      <h1>Completed: {Completed}</h1>
     </div>
   )
 }
